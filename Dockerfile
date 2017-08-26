@@ -18,6 +18,7 @@ RUN set -eu; cd /tmp \
     && ./b2 --prefix=/usr/local install \
     && cd ../.. \
     && b2 --prefix=/usr/local toolset=gcc link=static install \
+    && cd .. \
     && rm -rf boost_1_64_0 boost_1_64_0.7z
 
 RUN mkdir /src
